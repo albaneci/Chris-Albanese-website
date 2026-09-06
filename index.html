@@ -56,23 +56,30 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 #bio .bio-grid,#education .split{align-items:start}
 @media(max-width:800px){.hero-role{font-size:1.08rem!important}.feature-photo-strip{grid-template-columns:1fr}.feature-photo-strip img{height:300px}.video-grid{grid-template-columns:1fr}.genre-line{font-size:.86rem;letter-spacing:.1em}}
 </style>
+<style id="v5-photo-layout">
+.hero-headshot img{object-fit:cover;object-position:center}
+.split-section{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:3rem;align-items:center}
+.split-section.reverse{grid-template-columns:minmax(320px,.85fr) minmax(0,1.15fr)}
+.split-section.reverse .split-copy{order:2}.split-section.reverse .split-photo{order:1}
+.split-photo img{width:100%;height:100%;min-height:420px;max-height:620px;object-fit:cover;display:block}
+.bio-photo-panel .split-photo img{object-position:center top}
+.performances-photo-panel .split-photo img{object-position:center}
+.educator-photo-panel .split-photo img{object-position:center}
+.teaching-photo-panel .split-photo img{object-position:center top}
+.ensemble-photo-banner{margin:0 auto 3rem;max-width:1180px;padding:0 1.5rem}
+.ensemble-photo-banner img{width:100%;height:360px;object-fit:cover;display:block}
+@media(max-width:900px){
+  .split-section,.split-section.reverse{grid-template-columns:1fr;gap:1.5rem}
+  .split-section.reverse .split-copy,.split-section.reverse .split-photo{order:initial}
+  .split-photo img{min-height:0;max-height:none;height:auto}
+  .ensemble-photo-banner img{height:auto}
+}
+</style>
 </head>
 <body>
 <nav><div class="container navin"><a class="brand" href="#home">CHRIS ALBANESE</a><div class="navlinks"><a href="#bio">Bio</a><a href="#performances">Performances</a><a href="#media">Media</a><a href="#education">Educator</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a></div></div></nav>
 
 <main id="home">
-<section class="hero">
-<div class="hero-copy"><div>
-<div class="eyebrow hero-role">Conductor · Tenor · Educator</div>
-<h1>Chris<br>Albanese</h1>
-<h2>One artist. Many musical worlds.</h2>
-<div class="genre-line">Concert · Symphonic · Opera · Jazz · American Songbook</div>
-<div class="buttons"><a class="btn primary" href="#media">Listen & Watch</a><a class="btn" href="#performances">Upcoming</a></div>
-</div></div>
-<div class="hero-photo"><img src="assets/Albanese headshot JPEG.jpg" alt="Chris Albanese"></div>
-</section>
-
-<section class="statement"><div class="container"><div class="eyebrow">The Artist</div><h2>Versatility is not a side note. It is the artistry.</h2><p>As both performer and conductor, Chris Albanese brings a rare dual perspective to music-making—equally at home leading an ensemble, inhabiting a role, interpreting a song, collaborating with jazz musicians, or mentoring the next generation of artists.</p></div></section>
 
 <div class="container pillars">
 <div class="pillar"><div class="eyebrow">01</div><h3>Tenor</h3><p>Opera, oratorio, art song, musical theatre, jazz, popular music, and the American Songbook.</p></div>
@@ -89,6 +96,8 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 </section>
 
 <section id="bio">
+<div class="split-section bio-photo-panel">
+  <div class="split-copy">
 <div class="container">
   <div class="section-kicker">Biography</div>
   <h2 class="section-title">A life in many musical worlds.</h2>
@@ -106,9 +115,14 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
     </div>
   </div>
 </div>
+</div>
+  <div class="split-photo"><img src="assets/Albanese headshot JPEG.jpg" alt="Chris Albanese headshot"></div>
+</div>
 </section>
 
-<section id="performances"><div class="container"><div class="section-kicker">On Stage</div><h2 class="section-title">Upcoming performances</h2><div class="calendar">
+<section id="performances">
+<div class="split-section reverse performances-photo-panel">
+  <div class="split-copy"><div class="container"><div class="section-kicker">On Stage</div><h2 class="section-title">Upcoming performances</h2><div class="calendar">
 <div class="event"><div class="date">Sep 25, 2026</div><div><h3>Back Home Again</h3><p>Marching Hundred · IU Football vs. Northwestern · Memorial Stadium</p></div><div class="tag">Performance</div></div>
 <div class="event"><div class="date">Oct 17–18, 2026</div><div><h3>The Tender Land</h3><p>Singing Hoosiers with IU Opera · Indiana University Musical Arts Center</p></div><div class="tag">Tenor</div></div>
 <div class="event"><div class="date">Nov 5, 2026</div><div><h3>Regional All-State — Region 20</h3><p>Guest Conductor · Texas Music Education Association</p></div><div class="tag">Conductor</div></div>
@@ -119,7 +133,10 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 <div class="event"><div class="date">Apr 10–11, 2027</div><div><h3>Singing Hoosiers — 77th Annual Spring Concert</h3><p>Auer Hall</p></div><div class="tag">Ensemble</div></div>
 <div class="event"><div class="date">May 1–3, 2027</div><div><h3>Man of La Mancha</h3><p>“Padre” · Indianapolis Opera · Tobias Theater at Newfields</p></div><div class="tag">Opera</div></div>
 <div class="event"><div class="date">May 8, 2027</div><div><h3>Rachmaninoff — The Bells</h3><p>Akron Symphony Orchestra & Chorus · E.J. Thomas Hall</p></div><div class="tag">Tenor</div></div>
-</div></div></section>
+</div></div></div>
+  <div class="split-photo"><img src="assets/Albanese Carmina tenor solo photo.jpg" alt="Chris Albanese performing as tenor soloist"></div>
+</div>
+</section>
 
 <section><div class="container"><div class="section-kicker">Repertoire</div><h2 class="section-title">One artist. Many musical worlds.</h2><div class="worlds">
 <div class="world"><h3>Opera</h3><p>Operatic roles, ensemble work, and dramatic character.</p></div>
@@ -130,6 +147,10 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 <div class="world"><h3>Popular Music</h3><p>Cross-genre performance and large-scale community events.</p></div>
 </div></div></section>
 
+
+<div class="ensemble-photo-banner">
+  <img src="assets/SH Formal group photo Spring 2024.JPG" alt="The Singing Hoosiers">
+</div>
 <section id="media"><div class="container"><div class="section-kicker">Media / Recordings</div><h2 class="section-title">Listen. Watch. Experience.</h2><div class="video-grid"><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/noBntNCqcgY" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/jh5tLdoEEOk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_XjdT6ELrBI" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/9UC64RnACwk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></div></div></section>
 
 <section class="education" id="education"><div class="container split">
@@ -141,6 +162,8 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 
 
 <section id="teaching" class="education">
+<div class="split-section reverse teaching-photo-panel">
+  <div class="split-copy">
 <div class="container">
   <div class="section-kicker">Indiana University · Jacobs School of Music</div>
   <h2 class="section-title">Teaching & conducting pedagogy</h2>
@@ -180,6 +203,9 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
       <div class="principle"><h4>Respect for the Voice</h4><p>Respecting for the unique nature of each voice.</p></div>
     </div>
   </div>
+</div>
+</div>
+  <div class="split-photo"><img src="assets/Albanese tenor recital.jpg" alt="Chris Albanese in recital"></div>
 </div>
 </section>
 
