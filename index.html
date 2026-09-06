@@ -90,10 +90,74 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 @media(max-width:760px){.press-grid{grid-template-columns:1fr}.social-links{flex-direction:column}.social-links a{min-width:0}}
 </style>
 
+
+<style id="v7-menu-gallery">
+.top-menu{
+  position:sticky;
+  top:0;
+  z-index:9999;
+  background:rgba(250,248,243,.97);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(0,0,0,.12);
+}
+.top-menu-inner{
+  max-width:1180px;
+  margin:0 auto;
+  padding:.85rem 1.25rem;
+  display:flex;
+  gap:1.2rem;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.top-menu a{
+  font-family:"Inter",sans-serif;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:inherit;
+}
+.top-menu a:hover{text-decoration:underline;text-underline-offset:4px}
+
+.gallery-section{padding-top:4rem;padding-bottom:4rem}
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.2rem;
+}
+.gallery-item{margin:0;overflow:hidden;background:#eee}
+.gallery-item img{
+  width:100%;
+  height:460px;
+  object-fit:cover;
+  display:block;
+}
+.gallery-wide{grid-column:1/-1}
+.gallery-wide img{height:520px}
+
+.hero-headshot,.feature-photo-strip,.ensemble-photo-banner,.split-photo{display:none!important}
+
+@media(max-width:760px){
+  .top-menu-inner{
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .top-menu-inner::-webkit-scrollbar{display:none}
+  .top-menu a{white-space:nowrap}
+  .gallery-grid{grid-template-columns:1fr}
+  .gallery-wide{grid-column:auto}
+  .gallery-item img,.gallery-wide img{height:auto}
+}
+</style>
+
 </head>
 <body>
-<nav><div class="container navin"><a class="brand" href="#home">CHRIS ALBANESE</a><div class="navlinks"><a href="#bio">Bio</a><a href="#performances">Performances</a><a href="#media">Media</a><a href="#education">Educator</a><a href="#teaching">Teaching</a><a href="#press">Press</a>
-<a href="#contact">Contact</a></div></div></nav>
+<nav class="top-menu" aria-label="Primary navigation"><div class="top-menu-inner"><a href="#bio">Bio</a><a href="#performances">Performances</a><a href="#media">Media</a><a href="#educator">Educator</a><a href="#teaching">Teaching</a><a href="#gallery">Gallery</a><a href="#press">Press</a><a href="#contact">Contact</a></div></nav>
 
 <main id="home">
 
@@ -112,11 +176,10 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 </section>
 
 <section id="bio">
-<div class="split-section bio-photo-panel">
-  <div class="split-copy">
+
 <div class="container">
   <div class="section-kicker">Biography</div>
-  <h2 class="section-title">A life in many musical worlds.</h2>
+  <h2 class="section-title">Connecting musical worlds.</h2>
   <div class="bio-grid">
     <div class="bio-lead">
       <p class="lead">Chris Albanese is Pam and Jack Burks Associate Professor of Choral Conducting at the Indiana University Jacobs School of Music, where he conducts the Grammy-nominated Singing Hoosiers and teaches graduate and undergraduate level conducting courses. He concurrently serves as Music Director of the Akron Symphony Chorus.</p>
@@ -131,27 +194,22 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
     </div>
   </div>
 </div>
-</div>
-  <div class="split-photo"><img src="assets/Albanese headshot JPEG.jpg" alt="Chris Albanese headshot"></div>
-</div>
+
 </section>
 
 <section id="performances">
-<div class="split-section reverse performances-photo-panel">
-  <div class="split-copy"><div class="container"><div class="section-kicker">On Stage</div><h2 class="section-title">Upcoming performances</h2><div class="calendar">
+<div class="container"><div class="section-kicker">On Stage</div><h2 class="section-title">Upcoming performances</h2><div class="calendar">
 <div class="event"><div class="date">Sep 25, 2026</div><div><h3>Back Home Again</h3><p>Marching Hundred · IU Football vs. Northwestern · Memorial Stadium</p></div><div class="tag">Performance</div></div>
 <div class="event"><div class="date">Oct 17–18, 2026</div><div><h3>The Tender Land</h3><p>Singing Hoosiers with IU Opera · Indiana University Musical Arts Center</p></div><div class="tag">Tenor</div></div>
 <div class="event"><div class="date">Nov 5, 2026</div><div><h3>Regional All-State — Region 20</h3><p>Guest Conductor · Texas Music Education Association</p></div><div class="tag">Conductor</div></div>
 <div class="event"><div class="date">Nov 14, 2026</div><div><h3>Mozart Requiem</h3><p>Tenor Soloist · Akron Symphony Orchestra · E.J. Thomas Hall</p></div><div class="tag">Tenor</div></div>
-<div class="event"><div class="date">Dec 5, 2026</div><div><h3>Holiday Chimes</h3><p>Singing Hoosiers · IU Symphonic Band · African American Choral Ensemble · Guitar Ensemble · Bloomington South HS · Columbus North HS · IU Auditorium</p></div><div class="tag">Ensemble</div></div>
-<div class="event"><div class="date">Dec 11, 2026</div><div><h3>Home for the Holidays</h3><p>Akron Symphony Orchestra & Chorus · E.J. Thomas Hall</p></div><div class="tag">Performance</div></div>
-<div class="event"><div class="date">Feb 13, 2027</div><div><h3>Stardust Turns 100: A Hoagy Carmichael Celebration</h3><p>Singing Hoosiers · IU Jazz Department · Indiana University Musical Arts Center</p></div><div class="tag">Jazz</div></div>
+<div class="event"><div class="date">Dec 5, 2026</div><div><h3>Holiday Chimes</h3><p>Singing Hoosiers · IU Symphonic Band · African American Choral Conductor · Guitar Conductor · Bloomington South HS · Columbus North HS · IU Auditorium</p></div><div class="tag">Ensemble</div></div>
+<div class="event"><div class="date">Dec 11, 2026</div><div><h3>Home for the Holidays</h3><p>Akron Symphony Orchestra & Chorus · E.J. Thomas Hall</p></div><div class="tag">Conductor/Prep</div></div>
+<div class="event"><div class="date">Feb 13, 2027</div><div><h3>Stardust Turns 100: A Hoagy Carmichael Celebration</h3><p>Singing Hoosiers · IU Conductor Department · Indiana University Musical Arts Center</p></div><div class="tag">Jazz</div></div>
 <div class="event"><div class="date">Apr 10–11, 2027</div><div><h3>Singing Hoosiers — 77th Annual Spring Concert</h3><p>Auer Hall</p></div><div class="tag">Ensemble</div></div>
-<div class="event"><div class="date">May 1–3, 2027</div><div><h3>Man of La Mancha</h3><p>“Padre” · Indianapolis Opera · Tobias Theater at Newfields</p></div><div class="tag">Opera</div></div>
+<div class="event"><div class="date">May 1–3, 2027</div><div><h3>Man of La Mancha</h3><p>“Padre” · Indianapolis Performer · Tobias Theater at Newfields</p></div><div class="tag">Opera</div></div>
 <div class="event"><div class="date">May 8, 2027</div><div><h3>Rachmaninoff — The Bells</h3><p>Akron Symphony Orchestra & Chorus · E.J. Thomas Hall</p></div><div class="tag">Tenor</div></div>
-</div></div></div>
-  <div class="split-photo"><img src="assets/Albanese Carmina tenor solo photo.jpg" alt="Chris Albanese performing as tenor soloist"></div>
-</div>
+</div></div>
 </section>
 
 <section><div class="container"><div class="section-kicker">Repertoire</div><h2 class="section-title">One artist. Many musical worlds.</h2><div class="worlds">
@@ -162,11 +220,6 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 <div class="world"><h3>American Songbook</h3><p>Songwriters, standards, and the American musical tradition.</p></div>
 <div class="world"><h3>Popular Music</h3><p>Cross-genre performance and large-scale community events.</p></div>
 </div></div></section>
-
-
-<div class="ensemble-photo-banner">
-  <img src="assets/SH Formal group photo Spring 2024.JPG" alt="The Singing Hoosiers">
-</div>
 <section id="media"><div class="container"><div class="section-kicker">Media / Recordings</div><h2 class="section-title">Listen. Watch. Experience.</h2><div class="video-grid"><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/noBntNCqcgY" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/jh5tLdoEEOk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_XjdT6ELrBI" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/9UC64RnACwk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></div></div></section>
 
 <section class="education" id="education"><div class="container split">
@@ -178,8 +231,7 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 
 
 <section id="teaching" class="education">
-<div class="split-section reverse teaching-photo-panel">
-  <div class="split-copy">
+
 <div class="container">
   <div class="section-kicker">Indiana University · Jacobs School of Music</div>
   <h2 class="section-title">Teaching & conducting pedagogy</h2>
@@ -220,13 +272,36 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
     </div>
   </div>
 </div>
-</div>
-  <div class="split-photo"><img src="assets/Albanese tenor recital.jpg" alt="Chris Albanese in recital"></div>
-</div>
+
 </section>
 
 <section><div class="container"><p class="quote">“A career built not around a single lane, but around the freedom to make music wherever the music leads.”</p></div></section>
 
+
+
+<section id="gallery" class="gallery-section">
+  <div class="section-head">
+    <p class="eyebrow">Gallery</p>
+    <h2>In Performance &amp; Rehearsal</h2>
+  </div>
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="assets/Albanese headshot JPEG.jpg" alt="Chris Albanese headshot">
+    </figure>
+    <figure class="gallery-item">
+      <img src="assets/Albanese conducting photo.jpg" alt="Chris Albanese conducting">
+    </figure>
+    <figure class="gallery-item">
+      <img src="assets/Albanese tenor recital.jpg" alt="Chris Albanese in tenor recital">
+    </figure>
+    <figure class="gallery-item">
+      <img src="assets/Albanese Carmina tenor solo photo.jpg" alt="Chris Albanese performing as tenor soloist">
+    </figure>
+    <figure class="gallery-item gallery-wide">
+      <img src="assets/SH Formal group photo Spring 2024.JPG" alt="The Singing Hoosiers">
+    </figure>
+  </div>
+</section>
 
 <section id="press" class="press-section">
   <div class="section-head">
