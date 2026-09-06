@@ -42,17 +42,31 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 @media(max-width:850px){.navlinks{display:none}.hero{grid-template-columns:1fr}.hero-copy{padding:80px 4% 55px}.hero-photo{min-height:520px}.pillars,.split,.contact-grid,.bio-grid,.teaching-grid{grid-template-columns:1fr}.pillar,.pillar:not(:first-child){border-right:0;border-bottom:1px solid var(--line);padding:45px 0}.split img{height:480px}.bio-lead{position:static}.philosophy{grid-template-columns:1fr}.worlds{grid-template-columns:1fr 1fr}.event{grid-template-columns:1fr;gap:8px}.tag{width:max-content}.media-grid{grid-template-columns:1fr}.media-card{min-height:420px}section{padding:80px 0}}
 @media(max-width:520px){.worlds{grid-template-columns:1fr}.hero h1{font-size:66px}.hero h2{font-size:15px}.statement{padding:70px 0}}
 </style>
+
+<style id="requested-edits">
+.hero-role{font-size:1.35rem!important;letter-spacing:.14em;font-weight:700}
+.genre-line{margin-top:28px;font-family:Inter,Arial,sans-serif;font-size:1rem;letter-spacing:.14em;text-transform:uppercase;line-height:1.9;max-width:720px}
+.hero-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center top}
+.feature-photo-strip{display:grid;grid-template-columns:1.15fr .85fr 1fr;gap:0;max-width:1440px;margin:0 auto;background:#111}
+.feature-photo-strip img{display:block;width:100%;height:420px;object-fit:cover}
+.feature-photo-strip img:nth-child(1){object-position:center 28%}.feature-photo-strip img:nth-child(2){object-position:center 18%}.feature-photo-strip img:nth-child(3){object-position:center 35%}
+.video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.video-card{background:#111;box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.video-wrap{position:relative;aspect-ratio:16/9;overflow:hidden}.video-wrap iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+#bio .bio-grid,#education .split{align-items:start}
+@media(max-width:800px){.hero-role{font-size:1.08rem!important}.feature-photo-strip{grid-template-columns:1fr}.feature-photo-strip img{height:300px}.video-grid{grid-template-columns:1fr}.genre-line{font-size:.86rem;letter-spacing:.1em}}
+</style>
 </head>
 <body>
-<nav><div class="container navin"><a class="brand" href="#home">CHRIS ALBANESE</a><div class="navlinks"><a href="#artist">Artist</a><a href="#bio">Bio</a><a href="#performances">Performances</a><a href="#media">Media</a><a href="#education">Educator</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a></div></div></nav>
+<nav><div class="container navin"><a class="brand" href="#home">CHRIS ALBANESE</a><div class="navlinks"><a href="#bio">Bio</a><a href="#performances">Performances</a><a href="#media">Media</a><a href="#education">Educator</a><a href="#teaching">Teaching</a><a href="#contact">Contact</a></div></div></nav>
 
 <main id="home">
 <section class="hero">
 <div class="hero-copy"><div>
-<div class="eyebrow">Tenor · Conductor · Educator</div>
+<div class="eyebrow hero-role">Conductor · Tenor · Educator</div>
 <h1>Chris<br>Albanese</h1>
 <h2>One artist. Many musical worlds.</h2>
-<p>A multifaceted American musician whose work moves between opera, concert music, jazz, Broadway, popular music, the American Songbook, conducting, and education.</p>
+<div class="genre-line">Concert · Symphonic · Opera · Jazz · American Songbook</div>
 <div class="buttons"><a class="btn primary" href="#media">Listen & Watch</a><a class="btn" href="#performances">Upcoming</a></div>
 </div></div>
 <div class="hero-photo"><img src="assets/Albanese headshot JPEG.jpg" alt="Chris Albanese"></div>
@@ -66,12 +80,13 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 <div class="pillar"><div class="eyebrow">03</div><h3>Educator</h3><p>Teaching, mentorship, ensemble leadership, and the development of musicians across generations.</p></div>
 </div>
 
-<section id="artist"><div class="container split">
+
+
+<section class="feature-photo-strip" aria-label="Featured photography">
 <img src="assets/Albanese conducting photo.jpg" alt="Chris Albanese conducting">
-<div class="text"><div class="section-kicker">Artist · Scholar · Teacher</div><h2 class="section-title">Many disciplines. One musical voice.</h2>
-<p>Chris's career is defined by collaboration across musical boundaries. His work connects the intimacy of a singer's interpretation with the architectural thinking of a conductor and the human work of an educator.</p>
-<div class="affiliations"><div class="affiliation">Indiana University Jacobs School of Music</div><div class="affiliation">Akron Symphony Orchestra & Chorus</div></div>
-</div></div></section>
+<img src="assets/Albanese tenor recital.jpg" alt="Chris Albanese performing a tenor recital">
+<img src="assets/SH Formal group photo Spring 2024.JPG" alt="Chris Albanese with the Singing Hoosiers">
+</section>
 
 <section id="bio">
 <div class="container">
@@ -115,10 +130,7 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 <div class="world"><h3>Popular Music</h3><p>Cross-genre performance and large-scale community events.</p></div>
 </div></div></section>
 
-<section id="media"><div class="container"><div class="section-kicker">Media</div><h2 class="section-title">Listen. Watch. Experience.</h2><div class="media-grid">
-<div class="media-card"><video controls preload="metadata" style="width:100%;height:100%;object-fit:cover" poster="assets/Albanese Carmina tenor solo photo.jpg"><source src="assets/Olim Lacus video, Chris Albanese .mp4" type="video/mp4"></video><div class="overlay"><h3>Olim Lacus</h3><div>Chris Albanese · tenor</div></div></div>
-<div class="audio"><div class="section-kicker">Audio</div><h3>Comfort Ye / Every Valley</h3><p>Chris Albanese · tenor</p><audio controls preload="metadata"><source src="assets/Comfort Ye, Every Valley, Chris Albanese, tenor 2.m4a"></audio></div>
-</div></div></section>
+<section id="media"><div class="container"><div class="section-kicker">Media / Recordings</div><h2 class="section-title">Listen. Watch. Experience.</h2><div class="video-grid"><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/noBntNCqcgY" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/jh5tLdoEEOk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/_XjdT6ELrBI" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div><div class="video-card"><div class="video-wrap"><iframe src="https://www.youtube.com/embed/9UC64RnACwk" title="Chris Albanese performance" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div></div></div></div></section>
 
 <section class="education" id="education"><div class="container split">
 <img src="assets/SH Formal group photo Spring 2024.JPG" alt="Singing Hoosiers">
@@ -147,9 +159,10 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
       <div class="course"><div class="course-code">MUSG504</div><div class="course-name">Graduate Choral Conducting Practicum</div></div>
     </div>
     <div class="teaching-panel">
-      <h3>Ensembles Directed</h3>
-      <div class="course"><div class="course-code">IU</div><div class="course-name">Singing Hoosiers</div></div>
-      <div class="course"><div class="course-code">IU</div><div class="course-name">Choral Ensembles</div></div>
+      <h3>Ensembles Directed at Indiana University</h3>
+      <div class="course"><div class="course-code">IU</div><div class="course-name">The Singing Hoosiers</div></div>
+      <div class="course"><div class="course-code">IU</div><div class="course-name">Oratorio Chorus</div></div>
+      <div class="course"><div class="course-code">IU</div><div class="course-name">ResoluSHion Vocal Jazz Ensemble</div></div>
       <p style="color:#d8d0c4;margin-top:25px">Ensemble direction sits at the center of Chris's work as a conductor and educator—bringing together musicianship, communication, listening, leadership, and expressive intent.</p>
     </div>
   </div>
@@ -164,6 +177,7 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
       <div class="principle"><h4>Flexibility</h4><p>Developing an expressive gestural and sonic palette capable of meeting the demands of modern music making.</p></div>
       <div class="principle"><h4>Imagination</h4><p>Cultivating a sonic vision for the music before arriving on the podium.</p></div>
       <div class="principle"><h4>Holism</h4><p>Understanding technique, analysis, and expressivity as integral and integrated parts of the conductor.</p></div>
+      <div class="principle"><h4>Respect for the Voice</h4><p>Respecting for the unique nature of each voice.</p></div>
     </div>
   </div>
 </div>
@@ -171,7 +185,7 @@ footer{padding:30px 0;font-size:12px;color:var(--muted);border-top:1px solid var
 
 <section><div class="container"><p class="quote">“A career built not around a single lane, but around the freedom to make music wherever the music leads.”</p></div></section>
 
-<section id="contact" class="contact"><div class="container contact-grid"><div><div class="section-kicker">Connect</div><h2>Let's make music.</h2></div><div><p>For performance, conducting, educational, artistic, and collaboration inquiries, please get in touch.</p><div class="buttons"><a class="btn primary" href="mailto:">Contact Chris</a></div></div></div></section>
+<section id="contact" class="contact"><div class="container contact-grid"><div><div class="section-kicker">Connect</div><h2>Contact Chris</h2></div><div><p>For performance, conducting, educational, artistic, and collaboration inquiries, please get in touch.</p><div class="buttons"><a class="btn primary" href="mailto:calbanes@iu.edu">calbanes@iu.edu</a></div></div></div></section>
 </main>
 
 <footer class="container"><div>© 2026 Chris Albanese</div><div>Tenor · Conductor · Educator</div></footer>
